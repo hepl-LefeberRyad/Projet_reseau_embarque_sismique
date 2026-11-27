@@ -1,14 +1,13 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/b81d6d66-3b00-426e-8976-34b848ff685d" height="180" alt="image" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/ea5eb6ac-3cab-4cc1-82c8-d74329b1851a" height="180" alt="LOGO HEPL" />
-</p>
-
 # Projet réseau embarqué sismique
 ## Introduction
 Ce dépôt contient notre projet développé tout au long du cours de programmation µC et réseau. Le but est de concevoir un système distribué sur cartes NUCLEO-F767ZI capable de détecter des secousses sismiques dans un bâtiment à l'aide d'un accéléromètre (ADXL335) et de plusieurs modules externes reliés via les bus I2C, SPI et UART.
-
+<p align="center">
+  <img width="747" height="508" alt="image" src="https://github.com/user-attachments/assets/80785f20-9825-46f9-9bf6-0c9902e6940e" />
+</p>
 Chaque carte gère ses tâches en parallèle avec FreeRTOS afin d'acquérir les mesures à 100 Hz, calculer les valeurs RMS, horodater et sauvegarder les maxima en FRAM avec une RTC (synchronisée via NTP au démarrage), puis valider une secousse collective avant de déclencher l'alerte. En parallèle, une architecture pair-à-pair sur Ethernet permet aux STM32 de se découvrir en UDP et d'échanger leurs données en JSON via TCP. Le projet est divisé en 3 étapes qui seront mergées dans la branche principale du dépôt. Chaque étape aura un dossier avec les codes et les explications sur notre méthodologie et notre travail.
+<p align="center">
+  <img width="736" height="449" alt="Capture d'écran 2026-11-27 120054" src="https://github.com/user-attachments/assets/338db01f-2b5c-40c3-bc32-a98751cb2eb0" />
+</p>
 
 ## Matériel utilisé
 Le projet intègre un microcontrôleur STM32, le cœur de notre projet, un câble Ethernet avec un switch qui permet la connexion au réseau et la partie réseau du projet, un accéléromètre à 3 axes, une mémoire FRAM et un module RTC.
@@ -65,3 +64,8 @@ La troisième étape ajoute la sauvegarde persistante, la synchronisation tempor
 * **Sauvegarde en FRAM :** mémorise les dix valeurs maximales RMS ainsi que la valeur RMS max par nœud sur le réseau, et utilise les données reçues des autres nœuds pour valider une secousse détectée localement.
 * **RTC et NTP :** utilise la RTC externe comme référence temporelle pour la mémorisation en FRAM, avec une synchronisation au démarrage via le serveur NTP externe.
 * **Détection collective et alarme :** analyse les données reçues pour détecter une éventuelle secousse sismique collective et génère l'alarme.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b81d6d66-3b00-426e-8976-34b848ff685d" height="180" alt="image" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://github.com/user-attachments/assets/ea5eb6ac-3cab-4cc1-82c8-d74329b1851a" height="180" alt="LOGO HEPL" />
+</p>
