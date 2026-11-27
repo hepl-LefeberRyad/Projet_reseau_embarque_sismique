@@ -1,8 +1,6 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b81d6d66-3b00-426e-8976-34b848ff685d" height="180" alt="image" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/user-attachments/assets/94f8a69d-27ae-49c5-aebd-e0bfb7a4bce7" height="180" alt="image" />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://github.com/user-attachments/assets/ea5eb6ac-3cab-4cc1-82c8-d74329b1851a" height="180" alt="LOGO HEPL" />
 </p>
 
